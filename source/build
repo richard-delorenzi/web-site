@@ -1,7 +1,6 @@
 #!/bin/bash
 
 {
-    #echo -n "html_parts = "
     find sections -iname '*.md' -print0 |
         sed -z -r -e 's/(.*).md$/html_parts: \1.part.html/' |
         tr '\0' '\n'
