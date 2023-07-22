@@ -1,6 +1,12 @@
 all: html_parts
 
 %.part.html: %.md
+	echo '<section>' >$@
 	markdown $< >$@
+	echo '</section>' >$@
 
-include html_parts.mk
+%.section.html:
+
+
+include sections.mk
+

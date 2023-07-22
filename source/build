@@ -1,9 +1,28 @@
 #!/bin/bash
 
+function sections() {
+    find sections -maxdepth 1 -mindepth 1 -type d |
+        sed  -r -s 's#^sections/([^/]*)$#\1#' |
+        sort |
+        tr "\n" " "
+}
+
+function articles() {
+    section="$1"
+    find "sections/$section" -iname '*.md' |
+        sed -r -e 's/(.*).md$/\1.article.html/' |
+        sort |
+        tr '\n' ' '
+}
+
 {
-    find sections -iname '*.md' -print0 |
-        sed -z -r -e 's/(.*).md$/html_parts: \1.part.html/' |
-        tr '\0' '\n'
-} > html_parts.mk
+    for section in $(sections)
+    do
+        echo sections: ${section}.section.html
+        echo ${section}.section.html: $(articles $section)
+    done
+} > sections.mk
+
+
 
 make
