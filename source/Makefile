@@ -8,6 +8,7 @@ all: output.auto.html
 sections/%.section.auto.html:
 	@#echo building section $@ from $^
 	echo '<section id="$(*F)">' >$@
+	echo "<h1>$(*F)</h1>" >>$@ 
 	cat /dev/null $^ >>$@
 	echo '</section>' >>$@
 
