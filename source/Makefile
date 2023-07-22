@@ -8,5 +8,5 @@ all: html_parts
 %.section.html:
 
 
-include sections.mk
+include sections.auto.mk
 

@@ -21,7 +21,7 @@ function articles() {
         echo sections: ${section}.section.html
         echo ${section}.section.html: $(articles $section)
     done
-} > sections.mk
+} > sections.auto.mk
 
 
 
