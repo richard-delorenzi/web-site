@@ -18,8 +18,8 @@ function articles() {
 {
     for section in $(sections)
     do
-        echo sections: ${section}.section.auto.html
-        echo ${section}.section.auto.html: $(articles $section)
+        echo sections.auto.html: sections/${section}.section.auto.html
+        echo                     sections/${section}.section.auto.html: $(articles $section)
     done
 } > sections.auto.mk
 
