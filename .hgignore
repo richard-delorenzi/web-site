@@ -1,3 +1,4 @@
 syntax: glob
 docs/
-*.part.html
+*.auto.mk
+*.auto.html

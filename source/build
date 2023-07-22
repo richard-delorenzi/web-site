@@ -10,7 +10,7 @@ function sections() {
 function articles() {
     section="$1"
     find "sections/$section" -iname '*.md' |
-        sed -r -e 's/(.*).md$/\1.article.html/' |
+        sed -r -e 's/(.*).md$/\1.article.auto.html/' |
         sort |
         tr '\n' ' '
 }
@@ -18,11 +18,11 @@ function articles() {
 {
     for section in $(sections)
     do
-        echo sections: ${section}.section.html
-        echo ${section}.section.html: $(articles $section)
+        echo sections: ${section}.section.auto.html
+        echo ${section}.section.auto.html: $(articles $section)
     done
 } > sections.auto.mk
 
 
 
-make
+make --silent
