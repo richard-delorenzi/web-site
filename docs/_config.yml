@@ -1,3 +1,4 @@
+show_dir_listing: true
 plugins:
   - jekyll-relative-links
 relative_links:
