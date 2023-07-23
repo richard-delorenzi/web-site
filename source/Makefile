@@ -1,4 +1,4 @@
-all: output.auto.html
+all: out/output.html
 
 %.article.auto.html: %.md
 	echo '<article id="$(*F)">' >$@
@@ -19,9 +19,11 @@ sections.auto.html:
 	echo '</main>' >>$@
 
 output.auto.html: head.html sections.auto.html foot.html
-	@echo building output $@ from $^
+	@echo building output: $@ from $^
 	cat $^ >$@
 
+out/output.html: output.auto.html
+	cp -T $< $@
 
 -include sections.auto.mk
 
