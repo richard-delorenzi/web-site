@@ -18,5 +18,8 @@
 [See What the dutch did](https://www.youtube.com/watch?v=FXfNXLh51yc)
 
 ## Renewable energy
+[Renewable electricity is inevitable](
+https://www.youtube.com/watch?v=EAU5D8hqIUI
+) We just need to get out of the way. Texas is the USA state with the most renewable. It also has the least renewable incentives and regulation (for fossil fuel and renewable). Renewables are wining on economic reasons alone.
 ## Food
 
