@@ -1,3 +1,3 @@
 # Hello, world
 
-* see [output](output.html)
+* see [climate](climate.html)

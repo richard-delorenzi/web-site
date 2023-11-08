@@ -2,7 +2,7 @@
 trap:
 	@echo run ./build to build
 
-all: out/output.html
+all: out/climate.html
 
 %.article.auto.html: %.md
 	echo '<article id="$(*F)">' >$@
@@ -32,7 +32,7 @@ output.auto.html: head.html sections.auto.html foot.html
 	@echo building output: $@ from $^
 	cat $^ >$@
 
-out/output.html: output.auto.html
+out/climate.html: output.auto.html
 	cp -T $< $@
 
 -include sections.auto.mk
