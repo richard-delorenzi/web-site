@@ -19,40 +19,16 @@ em {
     font: inherit;
 }
 
-/*highlight selection*/
-section:target {
-    display: block;
-    %box-shadow: 0px 0px 5px 5px #f77;
-}
-section {
-    display: none;
-}
-
-
-/*remove indent and bullets, from the navigation list*/
-nav ul {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(6, 1fr);
-    list-style-type: none;
-    padding-left: 0;
-}
-nav ul li {
-    
-    %border: 2px solid black;
-    %border-collapse: collapse;
-}
-
 /*Garish colours, so that we can see what is going on*/
-body {background-color: #fff;}
-nav {background-color: #ccc;}
+:root {
+    --nav_background: rgba(150,255,190,0.85);
+}
+body {background-color: #eee;}
+nav {background-color: var(--nav_background);}
 aside {background-color: #fff;}
 footer {background-color: #afa;}
 header {background-color: #faa;}
 article {background-color: #ffa;}
-#logo {background-color: #aaa;}
-%nav ul li:nth-child(2n) {background-color: #ccc;}
-%nav ul li {background-color: #ddd;}
 
 /*hover — has to go after nav ul li:nth-child(2n), to override, as rules are both equal specificity*/
 nav ul li:hover {
@@ -61,7 +37,7 @@ nav ul li:hover {
 
 /*background*/
 body {
-    #background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/62/Starsinthesky.jpg");
+    %background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/62/Starsinthesky.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -97,4 +73,39 @@ article {
     %transform: rotate(+35deg) scale(2.0,2.0) translate(0.5em,1.0em);
     %background-color: red;
     %transition: background-color 10s, transform 1s;
+}
+
+/*************************************************************************/
+/*Layout*/
+/*************************************************************************/
+
+/*reset from kevin powell*/
+*. *::before, *::after {
+    box-sizing: border-box;
+}
+
+/*show selection*/
+section:target {
+    display: block;
+}
+section {
+    display: none;
+}
+
+/*Nav*/
+nav {
+    %position: fixed;
+    width: 100%;
+    z-index: 999;
+    
+}
+nav ul {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(6, 1fr);
+    list-style-type: none;
+    padding-left: 0;
+}
+nav li {
+
 }
