@@ -23,6 +23,4 @@ function articles() {
     done
 } > sections.auto.mk
 
-
-
-make --silent
+make all --silent

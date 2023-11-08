@@ -1,3 +1,7 @@
+.PHONY: trap
+trap:
+	@echo run ./build to build
+
 all: out/output.html
 
 %.article.auto.html: %.md
@@ -6,14 +10,16 @@ all: out/output.html
 	echo '</article>' >>$@
 
 sections/%.section.auto.html:
-	@#echo building section $@ from $^
+	@echo building section $@ from $^
 	echo '<section id="$(*F)">' >$@
-	echo "<h1>$(*F)</h1>" >>$@ 
+	echo '<details id="$(*F)">' >>$@
+	echo '<summary><h1>$(*F)</h1></summary>' >>$@ 
 	cat /dev/null $^ >>$@
+	echo '</details>' >>$@
 	echo '</section>' >>$@
 
 sections.auto.html:
-	@#echo building sections $@ from $^
+	@echo building sections $@ from $^
 	echo '<main>' >$@
 	cat /dev/null $^ >>$@
 	echo '</main>' >>$@
