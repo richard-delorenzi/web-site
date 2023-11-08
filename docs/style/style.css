@@ -56,21 +56,16 @@ section {
 
 /*Nav*/
 header {
-    %position: fixed;
-    z-index: 999;
     width: 100%;
     display: none;
 }
 nav {
-    %position: absolute;
-    width: 100%;
-    z-index: 999;
-    
+    width: 100%;    
 }
 nav ul {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(6, 1fr);
+    %display: grid;
+    %gap: 1rem;
+    %grid-template-columns: repeat(6, 1fr);
     list-style-type: none;
     padding-left: 0;
 }
