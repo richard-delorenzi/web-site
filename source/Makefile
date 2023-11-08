@@ -11,16 +11,20 @@ all: out/output.html
 
 sections/%.section.auto.html:
 	@echo building section $@ from $^
-	echo '<section id="$(*F)">' >$@
-	echo '<details id="$(*F)">' >>$@
-	echo '<summary><h1>$(*F)</h1></summary>' >>$@ 
+	echo -n >$@
+	echo '<section id="$(*F)">' >>$@
+	echo '<h1>$(*F)</h1>' >>$@
 	cat /dev/null $^ >>$@
-	echo '</details>' >>$@
 	echo '</section>' >>$@
 
 sections.auto.html:
 	@echo building sections $@ from $^
-	echo '<main>' >$@
+	echo -n >$@
+	echo '<nav>' >>$@
+	echo '<h1>Table of content</h1>' >>$@
+	cat  toc.auto.html >>$@
+	echo '</nav>' >>$@
+	echo '<main>' >>$@
 	cat /dev/null $^ >>$@
 	echo '</main>' >>$@
 
