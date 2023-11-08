@@ -30,7 +30,8 @@ https://results-2023.runonless.com/truck/?day=18&depot=pepsico&truck=pepsi_tesla
 https://www.youtube.com/watch?v=EAU5D8hqIUI
 ) We just need to get out of the way. Texas is the USA state with the most renewable. It also has the least renewable incentives and regulation (for fossil fuel and renewable). Renewables are wining on economic reasons alone.
 
-[UK electricity generation is already averaging over 30% over a year]
-(https://grid.iamkate.com/). On some days fossil fuels are less that 10%.
+[UK electricity generation is already averaging over 30% over a year](
+https://grid.iamkate.com/
+). On some days fossil fuels are less that 10%.
 ## Food
 
