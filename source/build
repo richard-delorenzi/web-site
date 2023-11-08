@@ -23,4 +23,13 @@ function articles() {
     done
 } > sections.auto.mk
 
+{
+    echo '<ul class="toc">' 
+    for section in $(sections)
+    do
+      echo "<li> <a href='#${section}'>${section}</a> </li>"   
+    done
+    echo '</ul>'
+} > toc.auto.html
+
 make all --silent
