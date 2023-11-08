@@ -1,3 +1,3 @@
-# Hello, world
+# Hello
 
 * see [climate](climate.html)
