@@ -31,13 +31,16 @@ section {
 
 /*remove indent and bullets, from the navigation list*/
 nav ul {
-    display: flex;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(6, 1fr);
     list-style-type: none;
     padding-left: 0;
 }
 nav ul li {
-    padding: 0.5ex;
-    border: 2px;
+    
+    %border: 2px solid black;
+    %border-collapse: collapse;
 }
 
 /*Garish colours, so that we can see what is going on*/
@@ -48,8 +51,8 @@ footer {background-color: #afa;}
 header {background-color: #faa;}
 article {background-color: #ffa;}
 #logo {background-color: #aaa;}
-nav ul li:nth-child(2n) {background-color: #ccc;}
-nav ul li {background-color: #ddd;}
+%nav ul li:nth-child(2n) {background-color: #ccc;}
+%nav ul li {background-color: #ddd;}
 
 /*hover — has to go after nav ul li:nth-child(2n), to override, as rules are both equal specificity*/
 nav ul li:hover {
