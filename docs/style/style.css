@@ -64,11 +64,28 @@ nav ul {
     padding-left: 0;
 }
 
+article, nav{
+    padding: min(1vw,2ex);
+}
+
+main {
+    max-width: 60em;
+}
+
 @media (min-width:600px) {
     body {
         display:grid;
-        grid-template-columns: minmax(min-content, 20%) auto;
+        grid-template-columns: minmax(min-content, min(20em,20%)) auto;
     }
-    
+}
+
+@media (min-width: 992px){
+    body {
+        grid-template-columns:
+            minmax(min-content, min(20em,20%)) 1em [content-start] 1fr [content-end] 1em;  
+    }
+    main {
+        grid-column: content;
+    }
 }
 
