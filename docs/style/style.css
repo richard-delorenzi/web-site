@@ -64,8 +64,11 @@ nav ul {
     padding-left: 0;
 }
 
+:root {
+    --gap: min(1vw,2ex);
+}
 article, nav{
-    padding: min(1vw,2ex);
+    padding: var(--gap);
 }
 
 main {
@@ -75,14 +78,11 @@ main {
 @media (min-width:600px) {
     body {
         display:grid;
-        grid-template-columns: minmax(min-content, min(20em,20%)) auto;
     }
-}
 
-@media (min-width: 992px){
     body {
         grid-template-columns:
-            minmax(min-content, min(20em,20%)) 1em [content-start] 1fr [content-end] 1em;  
+            minmax(min-content, min(20em,20%)) var(--gap) [content-start] 1fr [content-end] 1em;  
     }
     main {
         grid-column: content;
