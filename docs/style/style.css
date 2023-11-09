@@ -21,7 +21,7 @@ em {
 
 /*Garish colours, so that we can see what is going on*/
 :root {
-    --nav_background: rgba(150,255,190,0.85);
+    --nav_background: rgba(200,255,200,0.85);
 }
 body {background-color: #eee;}
 nav {background-color: var(--nav_background);}
@@ -56,19 +56,19 @@ section {
 
 /*Nav*/
 header {
-    width: 100%;
     display: none;
 }
-nav {
-    width: 100%;    
-}
+
 nav ul {
-    %display: grid;
-    %gap: 1rem;
-    %grid-template-columns: repeat(6, 1fr);
     list-style-type: none;
     padding-left: 0;
 }
-nav li {
 
+@media (min-width:600px) {
+    body {
+        display:grid;
+        grid-template-columns: minmax(min-content, 20%) auto;
+    }
+    
 }
+
