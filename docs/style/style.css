@@ -19,16 +19,16 @@ em {
     font: inherit;
 }
 
-/*Garish colours, so that we can see what is going on*/
 :root {
-    --nav_background: #efe;
+    --background: #f7fff7;
 }
-body {background-color: #eee;}
-nav {background-color: var(--nav_background);}
-aside {background-color: #fff;}
-footer {background-color: #afa;}
-header {background-color: #faa;}
-article {background-color: #ffe;}
+body {background-color: #ddd;}
+nav, article {
+    background-color: var(--background);
+}
+article{
+    border-radius: 25px;
+}
 nav ul li:hover {
     background-color: #fff;
 }
