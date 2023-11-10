@@ -75,6 +75,10 @@ main {
     max-width: 60em;
 }
 
+article {
+    margin-bottom: 1em;
+}
+
 @media (min-width:600px) {
     body {
         display:grid;
@@ -82,7 +86,10 @@ main {
 
     body {
         grid-template-columns:
-            minmax(min-content, min(20em,20%)) var(--gap) [content-start] 1fr [content-end] 1em;  
+            minmax(min-content, min(20em,20%)) [content-start] 1fr [content-end];  
+    }
+    article {
+        margin: 1em;
     }
     main {
         grid-column: content;
