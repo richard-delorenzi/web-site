@@ -96,3 +96,8 @@ article {
     }
 }
 
+@media (max-width: 300px) {
+    article, nav {
+        padding: 0;
+    }
+}
