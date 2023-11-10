@@ -21,14 +21,14 @@ em {
 
 /*Garish colours, so that we can see what is going on*/
 :root {
-    --nav_background: rgba(200,255,200,0.85);
+    --nav_background: #efe;
 }
 body {background-color: #eee;}
 nav {background-color: var(--nav_background);}
 aside {background-color: #fff;}
 footer {background-color: #afa;}
 header {background-color: #faa;}
-article {background-color: #ffa;}
+article {background-color: #ffe;}
 nav ul li:hover {
     background-color: #fff;
 }
