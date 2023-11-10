@@ -13,7 +13,7 @@ sections/%.section.auto.html:
 	@echo building section $@ from $^
 	echo -n >$@
 	echo '<section id="$(*F)">' >>$@
-	echo '<h1>$(*F)</h1>' >>$@
+	echo "$(*F)" | sed -e 's/_/ /g' -e 's%.*%<h1>\0</h1>%' >>$@ 
 	cat /dev/null $^ >>$@
 	echo '</section>' >>$@
 

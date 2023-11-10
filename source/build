@@ -27,7 +27,8 @@ function articles() {
     echo '<ul class="toc">' 
     for section in $(sections)
     do
-      echo "<li> <a href='#${section}'>${section}</a> </li>"   
+        clean_section="$(sed -e 's/_/ /g' <<< "$section")"
+        echo "<li> <a href='#${section}'>${clean_section}</a> </li>"   
     done
     echo '</ul>'
 } > toc.auto.html
