@@ -2,6 +2,7 @@
 
 :root {
     --background0: #ddd;
+    --shadow0: #888;
     --background: #f7fff7;
     --colour2: green;
     --colour1: black;
@@ -17,6 +18,7 @@
         --background: black;
         --colour2: lightgreen;
         --colour1: white;
+        --glow: var(--colour2);
     }
     a {color: lightblue;}
     a:visited {color: lightskyblue;}
@@ -114,11 +116,20 @@ article {
     }
     article {
         margin: 1em;
+        box-shadow: 5px 10px var(--shadow0);
     }
+    
     main {
         grid-column: content;
     }
 }
+@media screen and (prefers-color-scheme: dark) and (min-width:600px) {
+    article{
+        border-style: none;
+        box-shadow: 0 0 2px var(--colour1), 0 0 20px 5px var(--glow)
+    }
+}
+
 @media (max-width: 600px) {
    nav,article{
         border-right-style: none;
