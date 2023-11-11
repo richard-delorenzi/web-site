@@ -123,7 +123,7 @@ article {
         grid-column: content;
     }
 }
-@media screen and (prefers-color-scheme: dark) and (min-width:600px) {
+@media screen and (prefers-color-scheme: dark) and (min-width:300px) {
     article{
         border-style: none;
         box-shadow: 0 0 2px var(--colour1), 0 0 20px 5px var(--glow)
