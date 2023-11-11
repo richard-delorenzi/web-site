@@ -1,13 +1,38 @@
 @charset "utf-8";
+
+:root {
+    --background0: #ddd;
+    --background: #f7fff7;
+    --colour2: green;
+    --colour1: black;
+    --highlight_colour: red;
+    
+    --hover_bg_colour: var(--colour2);
+    --hover_fg_colour: var(--background); 
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background0: #333;
+        --background: darkgreen;
+        --colour2: #77ff77;
+        --colour1: white;
+        --highlight_colour: red;
+    }
+    a {color: lightblue;}
+    a:visited {color: lightskyblue;}
+}
+
 /*mostly serifs*/
 body {
     font-family: Serif;
+    color: var(--colour1);
 }
 
 /*no serifs in headings */
 h1, h2, h3, h4, h5, h6, h7, h8 {
     font-family: Sans-Serif;
-    color: green;
+    color: var(--colour2);
 }
 
 h1 {
@@ -15,22 +40,22 @@ h1 {
 }
 
 em {
-    color: red;
+    color: var(--highlight_bg_colour);
     font: inherit;
 }
 
-:root {
-    --background: #f7fff7;
-}
-body {background-color: #ddd;}
+
+body {background-color: var(--background0);}
 nav, article {
     background-color: var(--background);
+    border: solid var(--colour2);
 }
 article{
     border-radius: 25px;
 }
-nav ul li:hover {
-    background-color: #fff;
+nav a:hover {
+    background-color: var(--hover_bg_colour);
+    color:            var(--hover_fg_colour);
 }
 
 /*************************************************************************/
