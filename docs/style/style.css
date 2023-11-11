@@ -11,13 +11,12 @@
     --hover_fg_colour: var(--background); 
 }
 
-@media (prefers-color-scheme: dark) {
+@media screen and (prefers-color-scheme: dark) {
     :root {
-        --background0: #333;
-        --background: #030;
-        --colour2: limegreen;
+        --background0: #030;
+        --background: black;
+        --colour2: lightgreen;
         --colour1: white;
-        --highlight_colour: red;
     }
     a {color: lightblue;}
     a:visited {color: lightskyblue;}
@@ -40,15 +39,14 @@ h1 {
 }
 
 em {
-    color: var(--highlight_bg_colour);
-    font: inherit;
+    color: var(--highlight_colour);
 }
 
 
 body {background-color: var(--background0);}
 nav, article {
     background-color: var(--background);
-    border: solid var(--colour2);
+    border: 2px solid var(--colour2);
 }
 article{
     border-radius: 25px;
@@ -68,15 +66,16 @@ nav a:hover {
 }
 body {
     margin: 0;
-    font-weight: 400;
 }
 
 /*show selection*/
 section:target {
     display: block;
 }
-section {
-    display: none;
+@media screen {
+    section {
+        display: none;
+    }
 }
 
 /*Nav*/
@@ -120,9 +119,20 @@ article {
         grid-column: content;
     }
 }
-
+@media (max-width: 600px) {
+   nav,article{
+        border-right-style: none;
+        border-left-style: none;
+    }
+    nav {
+        border-top-style: none;
+    }  
+}
 @media (max-width: 300px) {
     article, nav {
         padding: 0;
+    }
+    nav,article{
+        border-radius: inherit;
     }
 }
