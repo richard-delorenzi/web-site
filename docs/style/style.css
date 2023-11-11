@@ -74,7 +74,8 @@ article, nav, img {
     max-width: 100%;
 }
 article{
-    max-width: 60em;
+    zzwidth: clamp(20em, 100%, 60em);
+    max-width: 80em;
 }
 
 /*show selection*/
@@ -121,11 +122,6 @@ article {
     main {
         grid-column: content;
     }
-    .article-box{
-        width: 100%; 
-        display: flex;
-        grid-template-columns: repeat(auto-fit, minmax(40em, auto));
-    }
     header,nav{
         grid-column: nav;
     }
@@ -136,6 +132,12 @@ article {
         top: 0;
         height: min-content;
         box-sizing: border-box;
+    }
+    .article-box{
+        width: 100%; 
+        display: flex;
+        /*auto-fix or auto-fill for grid*/
+        grid-template-columns: repeat(auto-fit, minmax(40em, auto));
     }
 }
 @media screen and (prefers-color-scheme: dark) and (min-width:300px) {
