@@ -13,8 +13,10 @@ sections/%.section.auto.html:
 	@echo building section $@ from $^
 	echo -n >$@
 	echo '<section id="$(*F)">' >>$@
-	echo "$(*F)" | sed -e 's/_/ /g' -e 's%.*%<h1>\0</h1>%' >>$@ 
+	echo "$(*F)" | sed -e 's/_/ /g' -e 's%.*%<h1>\0</h1>%' >>$@
+	echo '<div class="article-box">'  >>$@
 	cat /dev/null $^ >>$@
+	echo '</div>' >>$@
 	echo '</section>' >>$@
 
 sections.auto.html:
