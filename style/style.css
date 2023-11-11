@@ -1,13 +1,37 @@
 @charset "utf-8";
+
+:root {
+    --background0: #ddd;
+    --background: #f7fff7;
+    --colour2: green;
+    --colour1: black;
+    --highlight_colour: red;
+    
+    --hover_bg_colour: var(--colour2);
+    --hover_fg_colour: var(--background); 
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    :root {
+        --background0: #030;
+        --background: black;
+        --colour2: lightgreen;
+        --colour1: white;
+    }
+    a {color: lightblue;}
+    a:visited {color: lightskyblue;}
+}
+
 /*mostly serifs*/
 body {
     font-family: Serif;
+    color: var(--colour1);
 }
 
 /*no serifs in headings */
 h1, h2, h3, h4, h5, h6, h7, h8 {
     font-family: Sans-Serif;
-    color: green;
+    color: var(--colour2);
 }
 
 h1 {
@@ -15,74 +39,100 @@ h1 {
 }
 
 em {
-    color: red;
-    font: inherit;
+    color: var(--highlight_colour);
 }
 
-/*highlight selection*/
+
+body {background-color: var(--background0);}
+nav, article {
+    background-color: var(--background);
+    border: 2px solid var(--colour2);
+}
+article{
+    border-radius: 25px;
+}
+nav a:hover {
+    background-color: var(--hover_bg_colour);
+    color:            var(--hover_fg_colour);
+}
+
+/*************************************************************************/
+/*Layout*/
+/*************************************************************************/
+
+/*reset from kevin powell*/
+*. *::before, *::after {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+
+/*show selection*/
 section:target {
-    %border: double green;
-    box-shadow: 0px 0px 5px 5px #f77;
+    display: block;
+}
+@media screen {
+    section {
+        display: none;
+    }
 }
 
-/*remove indent and bullets, from the navigation list*/
+/*Nav*/
+header {
+    display: none;
+}
+
 nav ul {
     list-style-type: none;
     padding-left: 0;
 }
 
-/*Garish colours, so that we can see what is going on*/
-body {background-color: #fff;}
-nav {background-color: #aaa;}
-aside {background-color: #fff;}
-footer {background-color: #afa;}
-header {background-color: #faa;}
-article {background-color: #ffa;}
-#logo {background-color: #aaa;}
-nav ul li:nth-child(2n) {background-color: #888;}
-nav ul li {background-color: #999;}
-
-/*hover — has to go after nav ul li:nth-child(2n), to override, as rules are both equal specificity*/
-nav ul li:hover {
-    background-color: #fff;
+:root {
+    --gap: min(1vw,2ex);
+}
+article, nav{
+    padding: var(--gap);
 }
 
-/*background*/
-body {
-    #background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/62/Starsinthesky.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+main {
+    max-width: 60em;
 }
 
-/*transitions*/
-footer:hover { font-size: 300%; }
-footer {
-    font-size: 50%;
-    transition: font-size 1s;
-}
 article {
-    border: solid white;
-    transition: border 1s;
+    margin-bottom: 1em;
 }
 
-.upsidedown {
-    transform: rotate(180deg);
-    transition: transform 2s;
-}
+@media (min-width:600px) {
+    body {
+        display:grid;
+    }
 
-.upsidedown:hover {
-    transform: rotate(0deg);
-    transition: transform 0s;
+    body {
+        grid-template-columns:
+            minmax(min-content, min(20em,20%)) [content-start] 1fr [content-end];  
+    }
+    article {
+        margin: 1em;
+    }
+    main {
+        grid-column: content;
+    }
 }
-
-/*logo*/
-#logo * {
-    transform: rotate(-35deg) scale(1.0,1.0) translate(-1em,0.5em);
-    text-align: center;
+@media (max-width: 600px) {
+   nav,article{
+        border-right-style: none;
+        border-left-style: none;
+    }
+    nav {
+        border-top-style: none;
+    }  
 }
-
-#logo p:hover {
-    %transform: rotate(+35deg) scale(2.0,2.0) translate(0.5em,1.0em);
-    %background-color: red;
-    %transition: background-color 10s, transform 1s;
+@media (max-width: 300px) {
+    article, nav {
+        padding: 0;
+    }
+    nav,article{
+        border-radius: inherit;
+    }
 }
