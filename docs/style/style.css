@@ -73,6 +73,9 @@ body {
 article, nav, img {
     max-width: 100%;
 }
+article{
+    max-width: 60em;
+}
 
 /*show selection*/
 section:target {
@@ -120,8 +123,8 @@ article {
     }
     .article-box{
         width: 100%; 
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+        display: flex;
+        grid-template-columns: repeat(auto-fit, minmax(40em, auto));
     }
     header,nav{
         grid-column: nav;
