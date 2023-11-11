@@ -20,7 +20,7 @@ sections/%.section.auto.html:
 sections.auto.html:
 	@echo building sections $@ from $^
 	echo -n >$@
-	echo '<header>Climate</header>' >>$@
+	echo '<header><h1>Climate</h1></header>' >>$@
 	echo '<nav>' >>$@
 	echo '<h1>Table of content</h1>' >>$@
 	cat  toc.auto.html >>$@

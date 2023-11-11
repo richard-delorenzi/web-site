@@ -45,7 +45,7 @@ em {
 }
 
 
-body {background-color: var(--background0);}
+//body {background-color: var(--background0);}
 nav, article {
     background-color: var(--background);
     border: 2px solid var(--colour2);
@@ -81,10 +81,6 @@ section:target {
 }
 
 /*Nav*/
-header {
-    display: none;
-}
-
 nav ul {
     list-style-type: none;
     padding-left: 0;
@@ -112,7 +108,7 @@ article {
 
     body {
         grid-template-columns:
-            minmax(min-content, min(20em,20%)) [content-start] 1fr [content-end];  
+            [nav-start] minmax(min-content, min(20em,20%)) [nav-end content-start] 1fr [content-end];  
     }
     article {
         margin: 1em;
@@ -121,6 +117,17 @@ article {
     
     main {
         grid-column: content;
+    }
+    header,nav{
+        grid-column: nav;
+    }
+    nav{
+        /*not sure if done right: will it work on all browsers*/
+        /*clips if screen too short, or nav too long*/
+        zzzzposition: sticky;
+        top: 0;
+        height: min-content;
+        box-sizing: border-box;
     }
 }
 @media screen and (prefers-color-scheme: dark) and (min-width:300px) {
