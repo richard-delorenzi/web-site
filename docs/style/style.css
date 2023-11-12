@@ -135,10 +135,14 @@ article {
     }
     .article-box{
         width: 100%; 
-        display: grid;
+        display: flex;
         flex-wrap: wrap;
         /*auto-fix or auto-fill for grid*/
         grid-template-columns: repeat(auto-fit, minmax(40em, auto));
+    }
+    .article-box > * {
+        flex-grow: 1;
+        zzzzflex-basis: 20%;
     }
 }
 @media screen and (prefers-color-scheme: dark) and (min-width:300px) {
