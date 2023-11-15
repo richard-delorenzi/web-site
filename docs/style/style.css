@@ -75,7 +75,7 @@ img {
 }
 article{
     zzwidth: clamp(20em, 100%, 60em);
-    max-width: 80em;
+    max-width: 50em;
 }
 
 /*show selection*/
@@ -141,8 +141,7 @@ article {
         grid-template-columns: repeat(auto-fit, minmax(40em, auto));
     }
     .article-box > * {
-        flex-grow: 1;
-        zzzzflex-basis: 20%;
+        flex: 1 1 clamp(10em,20em,100%);
     }
 }
 @media screen and (prefers-color-scheme: dark) and (min-width:300px) {
