@@ -112,7 +112,7 @@ article {
 
     body {
         grid-template-columns:
-            [nav-start] minmax(min-content, min(20em,20%)) [nav-end content-start] 1fr [content-end];  
+            [side-start] minmax(min-content, min(20em,20%)) [side-end content-start] 1fr [content-end];  
     }
     article {
         margin: 1em;
@@ -122,16 +122,12 @@ article {
     main {
         grid-column: content;
     }
-    header,nav{
-        grid-column: nav;
+    .side{
+        grid-column: side;
     }
     nav{
-        /*not sure if done right: will it work on all browsers*/
-        /*clips if screen too short, or nav too long*/
-        zzzzposition: sticky;
+        position: sticky;
         top: 0;
-        height: min-content;
-        box-sizing: border-box;
     }
     .article-box{
         width: 100%; 
