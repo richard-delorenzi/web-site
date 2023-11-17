@@ -5,14 +5,14 @@ trap:
 all: out/climate.html
 
 %.article.auto.html: %.md
-	echo '<article id="$(*F)">' >$@
+	echo '<article id="article_$(*F)">' >$@
 	markdown $< >>$@
 	echo '</article>' >>$@
 
 sections/%.section.auto.html:
 	@echo building section $@ from $^
 	echo -n >$@
-	echo '<section id="$(*F)">' >>$@
+	echo '<section id="section_$(*F)">' >>$@
 	echo   "$(*F)" | sed -e 's/_/ /g' -e 's%.*%<h1>\0</h1>%' >>$@
 	echo   '<div class="article-box">'  >>$@
 	cat      /dev/null $^ >>$@
