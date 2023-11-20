@@ -5,13 +5,14 @@ trap:
 all: out/climate.html
 
 %.article.auto.html: %.md
+	@echo building article $@ #from $^
 	echo -n >$@
 	echo '<article id="article_$(*F)">' >>$@
 	markdown $< >>$@
 	echo '</article>' >>$@
 
 sections/%.section.auto.html:
-	@echo building section $@ from $^
+	@echo building section $@ #from $^
 	echo -n >$@
 	echo '<section id="section_$(*F)">' >>$@
 	echo   "$(*F)" | sed -e 's/_/ /g' -e 's%.*%  <h1>\0</h1>%' >>$@
@@ -21,7 +22,7 @@ sections/%.section.auto.html:
 	echo '</section>' >>$@
 
 sections.auto.html:
-	@echo building sections $@ from $^
+	@echo building sections $@ #from $^
 	echo -n >$@
 	echo '<div class="side">' >>$@
 	echo '  <header><h1>Climate</h1></header>' >>$@
@@ -35,10 +36,11 @@ sections.auto.html:
 	echo '</main>' >>$@
 
 output.auto.html: head.html sections.auto.html foot.html
-	@echo building output: $@ from $^
+	@echo building output: $@ #from $^
 	cat $^ >$@
 
 out/climate.html: output.auto.html
+	@echo copying to: $@ from: $^
 	cp -T $< $@
 
 -include sections.auto.mk
