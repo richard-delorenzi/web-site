@@ -64,7 +64,7 @@ blockquote > *:first-child:before {
     display: block;
     height: 1em;
 }
-blockquote {
+blockquote{
     background: var(--background0);
     border-left: 0.9em solid var(--colour2);
     margin-left: 1em;
@@ -75,6 +75,9 @@ blockquote {
 }
 blockquote p {
     display: inline;
+}
+cite:before {
+    content: "—";
 }
 /*************************************************************************/
 /*Layout*/

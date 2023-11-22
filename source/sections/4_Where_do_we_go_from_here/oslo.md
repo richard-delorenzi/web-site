@@ -23,3 +23,4 @@ Green spaces must therefore be incorporated into plans and projects more
 extensively than in the past. The design of the streets has a major bearing
 on the quality of life for the people moving through- and spending time in
 the City of Oslo.
+<cite> Extract from the [Street design manual Oslo](https://www.oslo.kommune.no/getfile.php/13441080-1646147194/Tjenester%20og%20tilbud/Plan%2C%20bygg%20og%20eiendom/Byggesaksveiledere%2C%20normer%20og%20skjemaer/Gatenormal%20og%20normark/Gate-%20og%20veinormaler/Street-design-manual_ENG.pdf) </cite>
