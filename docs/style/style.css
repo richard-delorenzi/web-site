@@ -53,7 +53,7 @@ nav, article {
 article{
     border-radius: 25px;
 }
-nav a:hover {
+a:hover {
     background-color: var(--hover_bg_colour);
     color:            var(--hover_fg_colour);
 }
