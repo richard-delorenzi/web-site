@@ -62,12 +62,7 @@ blockquote > *:first-child:before {
     content: open-quote;
     font-size: 300%;
     display: block;
-    margin: 0;
-    padding: 0;
-}
-blockquote > *:first-child {
-    //margin: 0;
-    //padding: 0;
+    height: 1em;
 }
 blockquote {
     background: var(--background0);
