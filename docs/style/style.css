@@ -58,6 +58,20 @@ nav a:hover {
     color:            var(--hover_fg_colour);
 }
 
+blockquote > *:first-child:before {
+    content: open-quote;
+    font-size: 300%;
+}
+blockquote {
+    background: var(--background0);
+    border-left: 10px solid var(--colour2);
+    margin: 1.5em 10px;
+    padding-left: 0.5em;
+    quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote p {
+    display: inline;
+}
 /*************************************************************************/
 /*Layout*/
 /*************************************************************************/
