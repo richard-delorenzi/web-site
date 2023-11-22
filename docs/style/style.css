@@ -61,13 +61,20 @@ nav a:hover {
 blockquote > *:first-child:before {
     content: open-quote;
     font-size: 300%;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+blockquote > *:first-child {
+    //margin: 0;
+    //padding: 0;
 }
 blockquote {
     background: var(--background0);
-    border-left: 10px solid var(--colour2);
-    margin: 1.5em 10px;
+    border-left: 0.9em solid var(--colour2);
+    margin-left: 1em;
     padding-left: 0.5em;
-    quotes: "\201C""\201D""\2018""\2019";
+    quotes: "“"  "”"  "‘"  "’";
 }
 blockquote p {
     display: inline;
