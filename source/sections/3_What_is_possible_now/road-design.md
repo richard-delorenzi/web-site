@@ -6,11 +6,7 @@ Most actions that make it better for walking, cycling, or public transport, also
 
 # references for now — :todo: rewrite
 
-* Read [Crow design manual (Netherlands)](https://crowplatform.com/#downloads)
 * Strong towns
-* Where to use [Roundabouts](https://www.youtube.com/watch?v=G24x26s3Hjg), where not to use them, and what type.
-* The dutch made it better for walking, cycling, **and** driving.
-[See what the dutch did](https://www.youtube.com/watch?v=FXfNXLh51yc)
 * Not just bikes
 * RM Transit
 * BicycleDutch

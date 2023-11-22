@@ -1,7 +1,7 @@
 # The city of oslo
 
 The country of Norway has sales of vehicles at over 90% electric.
-The city of Oslo is going farther.
+The city of Oslo is going farther:
 
 > ### 1.3.1 A greener and more attractive city
 > Oslo must be an attractive metropolis and capital city. The design of the
