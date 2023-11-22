@@ -68,7 +68,9 @@ blockquote {
     background: var(--background0);
     border-left: 0.9em solid var(--colour2);
     margin-left: 1em;
+    margin-right: 1em;
     padding-left: 0.5em;
+    padding-right: 0.5em;
     quotes: "“"  "”"  "‘"  "’";
 }
 blockquote p {
