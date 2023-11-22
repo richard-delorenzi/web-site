@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 :root {
-    --background0: #ddd;
+    --background0: #fff;
     --shadow0: #888;
     --background: #f7fff7;
     --colour2: green;
@@ -45,7 +45,7 @@ em {
 }
 
 
-//body {background-color: var(--background0);}
+body {background-color: var(--background0);}
 nav, article {
     background-color: var(--background);
     border: 2px solid var(--colour2);
