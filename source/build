@@ -15,22 +15,24 @@ function articles() {
         tr '\n' ' '
 }
 
-{
+function section_dependencies(){
     for section in $(sections)
     do
         echo sections.auto.html: sections/${section}.section.auto.html
         echo                     sections/${section}.section.auto.html: $(articles $section)
     done
-} > sections.auto.mk
+}
 
-{
+function toc(){
     echo '<ul class="toc">' 
     for section in $(sections)
     do
         clean_section="$(sed -e 's/_/ /g' <<< "$section")"
-        echo "<li> <a href='#section_${section}'>${clean_section}</a> </li>"   
+        echo "  <li> <a href='#section_${section}'>${clean_section}</a> </li>"   
     done
     echo '</ul>'
-} > toc.auto.html
+}
 
+toc > toc.auto.html
+section_dependencies > sections.auto.mk
 make all --silent
