@@ -37,7 +37,7 @@ sections.auto.html:
 
 output.auto.html: head.html sections.auto.html foot.html
 	@echo building output: $@ #from $^
-	cat $^ >$@
+	cat $^  >$@
 
 out/climate.html: output.auto.html
 	@echo copying to: $@ from: $^
