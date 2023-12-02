@@ -10,5 +10,6 @@
 ## Roads
 ### Why we build terrible [stroads]( https://en.wikipedia.org/wiki/Stroad "A stroad is a mix between a road and a street: A road is for getting you places. A street is a destination, a place. A stroad is both, and nether. No one wants to be on a stroad.")
 
-* [A history of how we changed who ownes the streets](https://www.youtube.com/watch?v=GKRaNyvMxjU)
-* See [Video](https://www.youtube.com/watch?v=8m4xzQ2_M0g)
+* [Highlight the problem](https://www.youtube.com/watch?v=8m4xzQ2_M0g)
+* [A history of how we changed who owns the streets](https://www.youtube.com/watch?v=GKRaNyvMxjU)
+
