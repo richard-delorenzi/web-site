@@ -49,5 +49,5 @@ out/climate.html: output.auto.html
 clean:
 	-find . \( -iname "*.auto.mk" -o -iname "*.auto.html" \) -print0 | xargs -r0 rm
 .PHONY: veryclean
-veryclean: clean
+realclean: clean
 	-find . \( -iname "*.orig" -o -iname "*~" \) -print0 | xargs -r0 rm
