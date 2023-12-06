@@ -18,9 +18,8 @@ function sections() {
 function articles() {
     section="$1"
     section="./sections/${section}"
-    #echo scanning section $section >/dev/stderr
     find "${section}" -iname '*.md' |
-        sed -r -e 's%(.*).md$%'"${build_dir}"'/\1.article.auto.html%' |
+        sed -r -e 's%(.*).md$%\1%' |
         sort |
         tr '\n' ' '
 }
@@ -29,8 +28,12 @@ function section_dependencies(){
     for section in $(sections)
     do
         echo "${build_dir}/sections.auto.html: ${build_dir}/sections/${section}.section.auto.html"
-        echo                                  "${build_dir}/sections/${section}.section.auto.html: $(articles $section)"
-        #echo found articles $(articles $section)  >/dev/stderr
+        #echo                                  "${build_dir}/sections/${section}.section.auto.html: $(articles $section)"
+        for article in $(articles $section)
+        do
+            echo "${build_dir}/sections/${section}.section.auto.html: ${build_dir}/$article.article.auto.html"
+            echo "${build_dir}/$article.article.auto.html: $article.md"
+        done
     done
 }
 
@@ -48,4 +51,8 @@ cd "$source_dir"
 make_build_dir_tree
 toc > "${build_dir}/toc.auto.html"
 section_dependencies > "${build_dir}/sections.auto.mk"
-make all --silent
+(
+    export SRC="."
+    export BLD="${build_dir}"
+    make all --silent
+)

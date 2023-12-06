@@ -4,14 +4,14 @@ trap:
 
 all: out/climate.html
 
-%.article.auto.html: %.md
+%.article.auto.html:
 	@echo building article $@ #from $^
 	echo -n >$@
 	echo '<article id="article_$(*F)">' >>$@
 	markdown $< >>$@
 	echo '</article>' >>$@
 
-sections/%.section.auto.html:
+%.section.auto.html:
 	@echo building section $@ #from $^
 	echo -n >$@
 	echo '<section id="section_$(*F)">' >>$@
@@ -21,25 +21,25 @@ sections/%.section.auto.html:
 	echo '  </div>' >>$@
 	echo '</section>' >>$@
 
-sections.auto.html:
+$(BLD)/sections.auto.html:
 	@echo building sections $@ #from $^
 	echo -n >$@
 	echo '<div class="side">' >>$@
 	echo '  <header><h1>Climate</h1></header>' >>$@
 	echo '  <nav>' >>$@
 	echo '    <h1>Table of content</h1>' >>$@
-	cat       toc.auto.html >>$@
+	cat       $(BLD)/toc.auto.html >>$@
 	echo '  </nav>' >>$@
 	echo '</div>' >>$@
 	echo '<main>' >>$@
 	cat    /dev/null $^ >>$@
 	echo '</main>' >>$@
 
-output.auto.html: head.html sections.auto.html foot.html
+$(BLD)/output.auto.html: head.html $(BLD)/sections.auto.html foot.html
 	@echo building output: $@ #from $^
 	cat $^  >$@
 
-out/climate.html: output.auto.html
+out/climate.html: $(BLD)/output.auto.html
 	@echo copying to: $@ from: $^
 	cp -T $< $@
 
