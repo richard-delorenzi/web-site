@@ -15,3 +15,6 @@
 
 ##Economics
 * [Wealth distribution](https://www.youtube.com/watch?v=QPKKQnijnsM)
+
+##Conspiracy
+* [Where do conspiracies come from?](https://www.youtube.com/watch?v=kFcf3GMiPis)
