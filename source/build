@@ -1,7 +1,14 @@
 #!/bin/bash
+script_dir="$(dirname "$0")"
+source_dir="$script_dir"
+build_dir="${source_dir}/build_dir"
+
+function make_build_dir_tree() {
+    find "${source_dir}" -type d -print0 | xargs -0 -I{} mkdir -p "$build_dir/{}"
+}
 
 function sections() {
-    find sections -maxdepth 1 -mindepth 1 -type d |
+    find "${source_dir}/sections" -maxdepth 1 -mindepth 1 -type d |
         sed  -r -s 's#^sections/([^/]*)$#\1#' |
         sort |
         tr "\n" " "
@@ -9,7 +16,7 @@ function sections() {
 
 function articles() {
     section="$1"
-    find "sections/$section" -iname '*.md' |
+    find "${section}" -iname '*.md' |
         sed -r -e 's/(.*).md$/\1.article.auto.html/' |
         sort |
         tr '\n' ' '
@@ -18,8 +25,8 @@ function articles() {
 function section_dependencies(){
     for section in $(sections)
     do
-        echo sections.auto.html: sections/${section}.section.auto.html
-        echo                     sections/${section}.section.auto.html: $(articles $section)
+        echo ${build_dir}/sections.auto.html: ${build_dir}/${section}.section.auto.html
+        echo                                  ${build_dir}/${section}.section.auto.html: $(articles $section)
     done
 }
 
@@ -33,6 +40,8 @@ function toc(){
     echo '</ul>'
 }
 
-toc > toc.auto.html
-section_dependencies > sections.auto.mk
+cd "$script_dir"
+make_build_dir_tree
+toc > "${build_dir}/toc.auto.html"
+section_dependencies > "${build_dir}/sections.auto.mk"
 make all --silent
