@@ -1,5 +1,5 @@
 # The Netherlands
-The Netherlands has, was once a car ridden hell-scape. However, it is now the cycling and walking capital of the world, and also a nice place to drive. Thanks to prioritising walking and cycling, they have made it a much better place for walking, cycling, and **driving**.
+The Netherlands was once a car ridden hell-scape. However, it is now the cycling and walking capital of the world, and also a nice place to drive. Thanks to prioritising walking and cycling, they have made it a much better place for walking, cycling, and **driving**.
 
 
 ## How they did it
