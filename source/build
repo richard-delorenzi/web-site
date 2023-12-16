@@ -1,5 +1,15 @@
 #!/bin/bash
 
+script_dir="$(dirname "$0")"
+cd "${script_dir}"
+source_dir="$(pwd)"
+build_dir="../build_dir"
+
+function make_build_dir_tree() {
+    echo creating "$build_dir" from "${source_dir}"
+    find . -type d -print0 | xargs -0 -I{} mkdir -p "$build_dir/{}"
+}
+
 function sections() {
     find sections -maxdepth 1 -mindepth 1 -type d |
         sed  -r -s 's#^sections/([^/]*)$#\1#' |
@@ -33,6 +43,13 @@ function toc(){
     echo '</ul>'
 }
 
-toc > toc.auto.html
-section_dependencies > sections.auto.mk
+make_build_dir_tree
+toc > "${build_dir}/toc.auto.html"
+section_dependencies > "${build_dir}/sections.auto.mk"
+
+cd "${build_dir}"
+ln -s -t. ../source
+ln -s -T ../the_site out
+ln -s -t. source/Makefile
+export VPATH=.:source
 make all --silent

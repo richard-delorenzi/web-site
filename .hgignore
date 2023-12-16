@@ -1,4 +1,5 @@
 syntax: glob
 docs/
+build_dir
 *.auto.mk
 *.auto.html
