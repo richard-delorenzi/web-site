@@ -1,8 +1,11 @@
 #!/bin/bash
-set -e
+set -o pipefail
+set -Eeu
+
 script_dir="$(dirname "$0")"
-source_dir="$script_dir"
-build_dir="../build_dir"
+cd "${script_dir}"
+source_dir="$(pwd)"
+build_dir="${source_dir}/../build_dir"
 
 function make_build_dir_tree() {
     find . -type d -print0 | xargs -0 -I{} mkdir -p "$build_dir/{}"
@@ -47,12 +50,13 @@ function toc(){
     echo '</ul>'
 }
 
-cd "$source_dir"
 make_build_dir_tree
 toc > "${build_dir}/toc.auto.html"
 section_dependencies > "${build_dir}/sections.auto.mk"
+
+echo start make
+cd "$build_dir"
 (
-    export SRC="."
-    export BLD="${build_dir}"
+    export srcdir="${source_dir}"
     make all --silent
 )

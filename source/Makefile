@@ -4,6 +4,9 @@ trap:
 
 all: out/climate.html
 
+%:: $(srcdir)/%
+	ln -s -T  $< $@
+
 %.article.auto.html:
 	@echo building article $@ #from $^
 	echo -n >$@
