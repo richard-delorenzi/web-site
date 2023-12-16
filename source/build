@@ -48,8 +48,8 @@ toc > "${build_dir}/toc.auto.html"
 section_dependencies > "${build_dir}/sections.auto.mk"
 
 cd "${build_dir}"
-ln -s -t. ../source
-ln -s -T ../the_site out
-ln -s -t. source/Makefile
+ln -f -s -t. ../source
+ln -f -s -T ../the_site out
+ln -f -s -t. source/Makefile
 export VPATH=.:source
 make all --silent
