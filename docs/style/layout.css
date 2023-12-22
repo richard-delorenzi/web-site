@@ -1,0 +1,104 @@
+@charset "utf-8";
+
+/*reset from kevin powell*/
+*. *::before, *::after {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+article{
+    zzwidth: clamp(20em, 100%, 60em);
+    max-width: 50em;
+}
+
+/*show selection*/
+section:target {
+    display: block;
+}
+@media screen {
+    section {
+        display: none;
+    }
+}
+
+/*Nav*/
+nav ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+:root {
+    --gap: min(1vw,2ex);
+}
+article, nav{
+    padding: var(--gap);
+}
+
+article {
+    margin-bottom: 1em;
+}
+
+@media (min-width:600px) {
+    body {
+        display:grid;
+    }
+
+    body {
+        grid-template-columns:
+            [side-start] minmax(min-content, min(20em,20%)) [side-end content-start] 1fr [content-end];  
+    }
+    article {
+        margin: 1em;
+        box-shadow: 5px 10px var(--shadow0);
+    }
+    
+    main {
+        grid-column: content;
+    }
+    .side{
+        grid-column: side;
+    }
+    nav{
+        position: sticky;
+        top: 0;
+    }
+    .article-box{
+        width: 100%; 
+        display: flex;
+        flex-wrap: wrap;
+        /*auto-fix or auto-fill for grid*/
+        grid-template-columns: repeat(auto-fit, minmax(40em, auto));
+    }
+    .article-box > * {
+        flex: 1 1 clamp(10em,20em,100%);
+    }
+}
+@media screen and (prefers-color-scheme: dark) and (min-width:300px) {
+    article{
+        border-style: none;
+        box-shadow: 0 0 2px var(--colour1), 0 0 20px 5px var(--glow)
+    }
+}
+
+@media (max-width: 600px) {
+   nav,article{
+        border-right-style: none;
+        border-left-style: none;
+    }
+    nav {
+        border-top-style: none;
+    }  
+}
+@media (max-width: 300px) {
+    article, nav {
+        padding: 0;
+    }
+    nav,article{
+        border-radius: inherit;
+    }
+}
