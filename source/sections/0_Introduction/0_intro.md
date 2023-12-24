@@ -15,6 +15,10 @@ There has been a disconnect between
 
 These are not separate things, they need to be re-connected. 
 
+## Journey together
+## Bias
+
+
 ## A new story
 
 A new paradigm is coming. It has to come, because the old way is dying.

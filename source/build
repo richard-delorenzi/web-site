@@ -52,4 +52,4 @@ ln -f -s -t. ../source
 ln -f -s -T ../the_site out
 ln -f -s -t. source/Makefile
 export VPATH=.:source
-make all --silent
+make all --silent --jobs=3 #jobs not needed, but is here so we know if concurency stops working

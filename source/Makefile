@@ -45,8 +45,12 @@ out/climate.html: output.auto.html
 
 -include sections.auto.mk
 
+
 .PHONY: clean
-clean:
+clean: oldclean
+	-rm -r ../build_dir
+.PHONY: oldclean
+oldclean:
 	-find . \( -iname "*.auto.mk" -o -iname "*.auto.html" \) -print0 | xargs -r0 rm
 .PHONY: veryclean
 realclean: clean
