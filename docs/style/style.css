@@ -24,6 +24,35 @@
     a:visited {color: lightskyblue;}
 }
 
+:root {
+    --font-ratio: 1.30;
+    --size-neg1: calc(var(--size-0) / var(--font-ratio));
+    --size-0: 1em;
+    --size-1: calc(var(--size-0) * var(--font-ratio));
+    --size-2: calc(var(--size-1) * var(--font-ratio));
+    --size-3: calc(var(--size-2) * var(--font-ratio));
+    --size-4: calc(var(--size-3) * var(--font-ratio));
+    --size-5: calc(var(--size-4) * var(--font-ratio));
+}
+
+body {
+    font-size: calc(var(--size-0) * 1em); 
+} 
+h1 {
+    font-size: var(--size-3);
+}
+h2 {
+    font-size: var(--size-2);
+}
+h3 {
+    font-size: var(--size-1);
+}
+
+h4,h5,h6,h7,h8 { /*alert for unformatted heading levels*/
+    font-size: var(--size-1);
+    color: var(--highlight_colour) !important;
+}
+
 /*mostly serifs*/
 body {
     font-family: Serif;
