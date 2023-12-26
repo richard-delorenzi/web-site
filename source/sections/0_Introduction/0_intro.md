@@ -1,10 +1,14 @@
 # Introduction
-A web site about climate change. It uses a model from the Be The Change Initiative: 
+A web site about climate change. It uses a model from the Be The Change Initiative from the  Pachamama Alliance.
+
+[A video from the awakening the dreamer symposium](https://www.youtube.com/watch?v=PbS_V3qgxdI) from the Pachamama Alliance.
 
 * Where are we? 
 * How did we get here?
 * What is possible now?
 * Where do we go from here?
+
+[![A wombat explains](images/be-the-change/home.png "a wombat explains how everything is connected.")](https://www.youtube.com/watch?v=GqJUeRltxs8)
 
 ## Environment, Social, Spiritual
 There has been a disconnect between
@@ -23,10 +27,15 @@ The first step is to drop what we already know, drop opinion. Look at evidence.
 ## Know nothing
 The only true knowledge is to know nothing.
 
-Be ready to forget everything that you know, do not try to mould new evidence to what you already know, mould yourself to the new evidence. However, do not be like a leaf blowing in the wind: Do not flit between ideas. Gather evidence, but come to no conclusion — for as long as possible. Take your time.
+Be ready to forget everything that you know, do not try to mould new evidence to what you already know, mould yourself to the new evidence. However, do not be like a leaf blowing in the wind: Do not flit between ideas. Gather evidence, but come to no conclusion — for as long as possible. Take your time. <q>The only true wisdom is in knowing you know nothing.</q> — Socrates (the ancient Greek philosopher).
 
 ## Bias
 All evidence is bias, so look at evidence from many sources. Where possible Look at highly bias evidence from all sources (this can be difficult as much of evidence from fossil fuel companies is not bias, it is just plain intentional lies). 
+
+## Drop identity
+Do not say I am a scientist, I am a sceptic, I am a religious person. To do this you have already made up your mind. Let go of identity. Just look.
+
+If you need an identity, then say I am a seeker. Say I don't know, but I will do my best to find-out. 
 
 ## A new story
 
