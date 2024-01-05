@@ -99,7 +99,7 @@ blockquote{
     margin-right: 1em;
     padding-left: 0.5em;
     padding-right: 0.5em;
-    quotes: "“"  "”"  "‘"  "’";
+    quotes: "“"  "”"; /*only one level for now, as level 2 is broken todo: fix*/
 }
 blockquote p {
     display: inline;
