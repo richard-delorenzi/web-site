@@ -6,7 +6,7 @@ source_dir="$(pwd)"
 build_dir="../build_dir"
 
 function make_build_dir_tree() {
-    echo creating "$build_dir" from "${source_dir}"
+    #echo creating "$build_dir" from "${source_dir}"
     find . -type d -print0 | xargs -0 -I{} mkdir -p "$build_dir/{}"
 }
 
@@ -30,6 +30,7 @@ function section_dependencies(){
     do
         echo sections.auto.html: sections/${section}.section.auto.html
         echo                     sections/${section}.section.auto.html: $(articles $section)
+        echo                     sections/${section}.section.auto.html: ./sections/${section}.dir
     done
 }
 
@@ -51,5 +52,5 @@ cd "${build_dir}"
 ln -f -s -t. ../source
 ln -f -s -T ../the_site out
 ln -f -s -t. source/Makefile
-export VPATH=.:source
+export VPATH=source:.
 make all --silent --jobs=3 #jobs not needed, but is here so we know if concurency stops working

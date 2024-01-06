@@ -4,6 +4,11 @@ trap:
 
 all: out/climate.html
 
+# detect other changes to sections dir, to cause a section rebuild
+./sections/%.dir: source/sections/%/
+	@echo building dir_stamp $@ #from $^
+	touch $@
+
 %.article.auto.html: %.md
 	@echo building article $@ #from $^
 	echo -n >$@
