@@ -6,8 +6,19 @@ We fixed it. That is we did stage one: stop breaking it. Stage two is wait one h
 ## Acid rain
 :todo: add how we fixed it
 
-## Lead in petrol
+## Removal of Lead in petrol
 
+## End of slavery -- partly
+
+## Apartheid south Africa, usa, 
+
+## Votes for women
+### votes for everyone
+
+## Equality
+
+## Days off, christmass holiday, sick leave, Free medical care
+Most countries have these 
 
 ## Others
 :todo: add past successes
