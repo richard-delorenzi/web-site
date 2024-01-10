@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#Config
+alias docker=podman #use podman as docker
+
+#the script
+shopt -s expand_aliases
+cd "$(dirname "$0")"
+
+docker run -it --rm -w "/home/source" -v "$(pwd)/..":"/home" localhost/my/web-builder "./_build"
