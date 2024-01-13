@@ -1,0 +1,6 @@
+#!/bin/bash
+#podman create  --name "rd-web-build" -w /home/source -v "$(pwd)/..":/home localhost/my/web-builder ./build
+
+podman create --name "rd-web-build" --uidmap=1000:0:1 --gidmap=1000:0:1 --uidmap=0:1:1000 --gidmap=0:1:1000  -v $(pwd)/..:/home/code localhost/my/web-builder 
+
+echo 'podman start -a "rd-web-build" # to build'
