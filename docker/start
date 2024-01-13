@@ -1,6 +1,22 @@
 #!/bin/bash
+set -e
 #podman create  --name "rd-web-build" -w /home/source -v "$(pwd)/..":/home localhost/my/web-builder ./build
 
-podman create --name "rd-web-build" --uidmap=1000:0:1 --gidmap=1000:0:1 --uidmap=0:1:1000 --gidmap=0:1:1000  -v $(pwd)/..:/home/code localhost/my/web-builder 
+script_dir="$(dirname $0)"
+cd $script_dir
+
+container_name="rd-web-build"
+image_name="localhost/my/web-builder"
+internal_uid=1000
+external_uid_offset=0
+uid_amount=1
+uidmap=$internal_uid:$external_uid_offset:$uid_amount
+
+internal_priv_start=0
+priv_amount=1000
+external_priv_offset=1 #start at first sub-user
+rootuidmap=$internal_priv_start:$external_priv_offset:$priv_amount
+
+podman create --name "$container_name" --uidmap=$uidmap --gidmap=$uidmap --uidmap=$rootuidmap --gidmap=$rootuidmap  -v $(pwd)/..:/home/code "$image_name" ./build
 
 echo 'podman start -a "rd-web-build" # to build'
