@@ -18,4 +18,4 @@ rootuidmap=$internal_priv_start:$external_priv_offset:$priv_amount
 
 podman create --name "$container_name" --uidmap=$uidmap --gidmap=$uidmap --uidmap=$rootuidmap --gidmap=$rootuidmap  -v $(pwd)/..:/home/code "$image_name" ./build
 
-echo 'podman start -a "rd-web-build" # to build'
+echo "podman start -a '$container_name' # to build"
