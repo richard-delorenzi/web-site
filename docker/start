@@ -1,6 +1,5 @@
 #!/bin/bash
 set -e
-#podman create  --name "rd-web-build" -w /home/source -v "$(pwd)/..":/home localhost/my/web-builder ./build
 
 script_dir="$(dirname $0)"
 cd $script_dir
