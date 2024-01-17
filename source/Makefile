@@ -60,3 +60,4 @@ oldclean:
 .PHONY: veryclean
 realclean: clean
 	-find . \( -iname "*.orig" -o -iname "*~" \) -print0 | xargs -r0 rm
+	-rm ../docs/climate.html
