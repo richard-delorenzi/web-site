@@ -31,6 +31,7 @@ function section_dependencies(){
         echo sections.auto.html: sections/${section}.section.auto.html
         echo                     sections/${section}.section.auto.html: $(articles $section)
         echo                     sections/${section}.section.auto.html: ./sections/${section}.dir
+        echo
     done
 }
 
