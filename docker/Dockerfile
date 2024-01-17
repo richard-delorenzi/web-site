@@ -6,4 +6,4 @@ USER 1000:1000
 RUN pipx install markdown
 RUN ln -s -T markdown_py /home/.local/bin/markdown   
 WORKDIR /home/code/source
-CMD ./build
+CMD ./_build
