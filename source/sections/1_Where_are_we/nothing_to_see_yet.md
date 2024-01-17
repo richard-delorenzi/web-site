@@ -7,4 +7,4 @@ Choose another section.
 * [our world in data](https://ourworldindata.org)
 
 #other
-* https://xkcd.com/1732/
+* [xkcd — global warming : history of the world](https://xkcd.com/1732/)
