@@ -51,13 +51,21 @@ out/climate.html: output.auto.html
 -include sections.auto.mk
 
 
-.PHONY: clean
-clean: oldclean
-	-rm -r ../build_dir
 .PHONY: oldclean
 oldclean:
 	-find . \( -iname "*.auto.mk" -o -iname "*.auto.html" \) -print0 | xargs -r0 rm
-.PHONY: veryclean
-realclean: clean
+
+.PHONY: clean
+clean:
+	-rm -r ../build_dir
+
+.PHONY: clean-backups
+clean-backups:
 	-find . \( -iname "*.orig" -o -iname "*~" \) -print0 | xargs -r0 rm
+
+.PHONY: clean-target
+clean-target: clean
 	-rm ../docs/climate.html
+
+.PHONY: realclean
+realclean: clean clean-target clean-backups
