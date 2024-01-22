@@ -6,7 +6,7 @@
 * BBC podcast [How they made us doubt everything](https://www.bbc.co.uk/programmes/m000l7q1/episodes/downloads)
 
 ## Myths
-* [Some myths about EVs](https://www.carbonbrief.org/factcheck-21-misleading-myths-about-electric-vehicles/?fbclid=IwAR2Cw7zyGAM5gVvIhoBWLka_6I_SP9V-OcVS5btiHfiUH85H0U5Iirm0Vpc)
+* [Some myths about EVs](https://www.carbonbrief.org/factcheck-21-misleading-myths-about-electric-vehicles/?fbclid=IwAR2Cw7zyGAM5gVvIhoBWLka_6I_SP9V-OcVS5btiHfiUH85H0U5Iirm0Vpc) -- [Fire myths](https://www.evfiresafe.com/ev-fire-key-findings)
 * [Carbon capture is not real](https://www.youtube.com/watch?v=nJslrTT-Yhc)
 * [Carbon footprint](https://www.youtube.com/watch?v=5sgRTbTm91Q)
 
