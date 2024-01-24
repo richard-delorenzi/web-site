@@ -11,5 +11,5 @@ All games have rules and goals. GDP is the wrong goal. If GDP is the goal, then 
 
 GDP is the measure of inputs (some say it is a measure of outputs, however all outputs of one part of the system are inputs to another. Total inputs = total outputs) to the system. Therefore at easy way to increase GDP is to increase waste.
 
-## Grows is not possible
+## Growth is not possible
 A hamster doubles in mass every day for the first two weeks of its life. If it continued like this for three months, then it would weigh more than the Earth and Jupiter. By day 104, it would be more massive than the sun.
