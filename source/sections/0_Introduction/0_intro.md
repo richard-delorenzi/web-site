@@ -8,7 +8,7 @@ A web site about climate change. It uses a model from the Be The Change Initiati
 * What is possible now?
 * Where do we go from here?
 
-[![A wombat explains](images/be-the-change/home.png "a wombat explains how everything is connected.")](https://www.youtube.com/watch?v=GqJUeRltxs8)
+[![A wombat explains](images/be-the-change/home.png "A wombat explains how everything is connected.")](https://www.youtube.com/watch?v=GqJUeRltxs8)
 
 ## Environment, Social, Spiritual
 There has been a disconnect between

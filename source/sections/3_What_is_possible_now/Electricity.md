@@ -7,4 +7,4 @@ We just need to get out of the way. Texas is the USA state with the most renewab
 On some days fossil fuels are less that 10%.
 
 Last year it was 35.8% renewable (The green inner ring is renewable).
-![On 2023-11-10 the previous years electricity production was 35.8% renewable](images/electricity/UK_electricity_grid_past_year_2023-11-10_20-27.png "inner ring: &NewLine;  green = renewable (35.8%) &NewLine;  red = fossil fuel (36.1%)  &NewLine;  blue = other (20%)")
+![On 2023-11-10 the previous years electricity production was 35.8% renewable](images/electricity/UK_electricity_grid_past_year_2023-11-10_20-27.png "Inner ring: &NewLine;  green = renewable (35.8%) &NewLine;  red = fossil fuel (36.1%)  &NewLine;  blue = other (20%)")
