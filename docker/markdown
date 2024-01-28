@@ -1,2 +1,2 @@
 #!/usr/bin/bash
-python3 -m markdown -x yafg "$@" 
+python3 -m markdown -x yafg -x mdx_truly_sane_lists -x mdx_linkify "$@" 
