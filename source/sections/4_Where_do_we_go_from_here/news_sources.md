@@ -16,7 +16,7 @@ A better approach is to seek view from all points of view: extreme left and extr
 e.g. When trying to check the viability of carbon capture. Checkout the work of the scientist trying to get it to work. Check out what the oil companies have to say. And, if necessary check that the detractors have to say. I say if necessary, because at this point you will have a very bias pro-carbon-capture point of view, and enough evidence to see that it is uneconomic. As you continue reading on the other side e.g drilled podcast, you will see that it is a smoke screen, to divert our attention from changes that could work.
 
 ## Sources of information to reduce bias and opinion
-* https://mediabiasfactcheck.com/center/ (#todo# check reliability of this site)
+* https://mediabiasfactcheck.com/center/ (#todo# check reliability of this site: the political map, and freedom map seem bias)
 * [Gap minder](https://www.gapminder.org/)—[check](https://mediabiasfactcheck.com/gapminder-bias/)
 * [Factcheck.org](https://www.factcheck.org/)—[check](https://mediabiasfactcheck.com/factcheck/)
 * [full fact](https://fullfact.org/)—[check](https://mediabiasfactcheck.com/full-fact-uk/)
