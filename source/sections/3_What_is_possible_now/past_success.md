@@ -2,6 +2,7 @@
 
 ## Ozone hole 
 We fixed it. That is we did stage one: stop breaking it. Stage two is wait one hundred years. :todo: add details.
+See [podcast: ozone — european investment bank](https://www.eib.org/en/podcasts/series/ozone)
 
 ## Acid rain
 :todo: add how we fixed it
