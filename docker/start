@@ -16,6 +16,6 @@ priv_amount=1000
 external_priv_offset=1 #start at first sub-user
 rootuidmap=$internal_priv_start:$external_priv_offset:$priv_amount
 
-podman create --name "$container_name" --uidmap=$uidmap --gidmap=$uidmap --uidmap=$rootuidmap --gidmap=$rootuidmap  -v $(pwd)/..:/home/code "$image_name" ./build
+podman create --name "$container_name" --uidmap=$uidmap --gidmap=$uidmap --uidmap=$rootuidmap --gidmap=$rootuidmap  -v $(pwd)/..:/home/code "$image_name"
 
 echo "podman start -a '$container_name' # to build"
