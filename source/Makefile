@@ -35,6 +35,10 @@ sections.auto.html:
 	echo '    <h1>Table of content</h1>' >>$@
 	cat       toc.auto.html >>$@
 	echo '  </nav>' >>$@
+#	echo '  <div class="control-panel">' >>$@
+#	echo '     <h1>Control Panel</h1>' >>$@
+#	cat        source/controls.html >>$@
+#	echo '  </div>' >>$@
 	echo '</div>' >>$@
 	echo '<main>' >>$@
 	cat    /dev/null $^ >>$@
