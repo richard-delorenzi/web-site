@@ -7,7 +7,7 @@ The Netherlands was once a car ridden hell-scape. However, it is now the cycling
 Some of the things that they did are: separate travel routes into roads and streets. A road if for getting some where, a street is a destination.
 
 
-![A street in the Netherlands](images/roads_and_streets/Rocky_Mountains-street_in_Utrecht_the_Netherlands.jpeg "A street in the Netherlands, designed for people, but it has some cars. :todo: get a better picture")
+![A street in the Netherlands](images/roads_and_streets/Dutch_street.jpeg "A street in the Netherlands, designed for people, but it has some cars. :todo: get a better picture")
 
 
 ![A road in the Netherlands](images/roads_and_streets/A325.jpeg "A road in the Netherlands, designed to get you places.")
