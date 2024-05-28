@@ -18,8 +18,10 @@ EVs are simpler, with fewer moving parts.
 ### Cost
 The running costs of an EV are now so low, that if you drive an average amount, then you will get your money back in a few years.
 
-## Scooters and bicycles
+## Electric Scooters, bicycles, unicycles
 There are a range of these. Some very powerful (they should be licensed like small motorbikes). However, most are of moderate power. Some only assist so that you have to pedal. While some you only need to pedal to get started (This is a safety feature. There may be alternate ways to add this safety.). 
+
+A very powerful E-unicycle [review](https://www.youtube.com/watch?v=L8elK8Go-3g)
 
 ### How many electric cars
 See sections on designing for cycling and walking. We need fewer cars, but the cars that exist should be electric. The majority of electric cars should be very very small, or very very big: scooters, bicycles, trains or trams. If you don't need a car to get to work, then you probably don't need a car. So make it so that you don't need a car to get to work.
