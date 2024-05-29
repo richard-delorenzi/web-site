@@ -43,29 +43,8 @@ article, nav{
     padding: var(--gap);
 }
 
-
-/*Does not work in firefox at present 2024-05-28*/
-@keyframes detect-scroll {
-    from,
-    to {
-        --can-scroll: ;
-    }
-}
-article {
-  animation: detect-scroll linear;
-  animation-timeline: scroll(self);
-
-  --bg-if-can-scroll: var(--can-scroll) #3D9970;
-  --bg-if-cant-scroll: #FF4136;
-  background: var(--bg-if-can-scroll, var(--bg-if-cant-scroll));
-}
-
-
-
 article {
     margin-bottom: 1em;
-    overflow: auto;
-    max-height: 40em;
 }
 
 @media (min-width:600px) {

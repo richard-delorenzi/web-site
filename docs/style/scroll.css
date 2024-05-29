@@ -1,0 +1,46 @@
+/*Does not work in firefox at present 2024-05-28*/
+@keyframes detect-scroll {
+    from,
+    to {
+        --can-scroll: ;
+    }
+}
+article {
+  animation: detect-scroll linear;
+  animation-timeline: scroll(self);
+
+  --bg-if-can-scroll: var(--can-scroll) #3D9970;
+  --bg-if-cant-scroll: #FF4136;
+  zz-color: var(--bg-if-can-scroll, var(--bg-if-cant-scroll));
+}
+
+
+/*scroll indication*/
+article {
+    overflow: auto;
+    max-height: 40em;
+}
+article{
+    background:
+        /* Shadow covers */
+        linear-gradient(green 30%, rgba(255,255,255,0)),
+        linear-gradient(rgba(255,255,255,0), green 70%) 0 100%,
+        
+        /* Shadows */
+        radial-gradient(50% 0, farthest-side, rgba(0,0,0,.5), rgba(0,0,0,0)),
+        radial-gradient(50% 100%,farthest-side, rgba(0,0,0,.5), rgba(0,0,0,0)) 0 100%;
+    background:
+        /* Shadow covers */
+        linear-gradient(white 30%, rgba(255,255,255,0)),
+        linear-gradient(rgba(255,255,255,0), white 70%) 0 100%,
+        
+        /* Shadows */
+        radial-gradient(farthest-side at 50% 0, rgba(0,0,0,1), rgba(0,0,0,0)),
+        radial-gradient(farthest-side at 50% 100%, rgba(0,0,0,1), rgba(0,0,0,0)) 0 100%;
+    background-repeat: no-repeat;
+    --background-color: white;
+    background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+    
+    /* Opera doesn't support this in the shorthand */
+    background-attachment: local, local, scroll, scroll;
+}
