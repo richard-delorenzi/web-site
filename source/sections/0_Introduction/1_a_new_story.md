@@ -10,7 +10,7 @@ It will seem at first that everything that you know will have to be unlearnt. Do
 I can not tell you what to do. I am but a fellow traveller. I can guide you, You can guide me, as we travel together.
 
 # :todo: telling stories
-Add section on how everything is affected my stories
-How we seen to tell stories of a new way
+Add section on how everything is affected by stories
+How we need to tell stories of a new way
 How we had good stories in the past
-How there stories have been subverted, or replaced.
+How these stories have been subverted, or replaced.
