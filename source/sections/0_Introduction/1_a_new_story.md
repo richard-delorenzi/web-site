@@ -8,3 +8,9 @@ However the new way is scary. Especially for those of us that can see it coming.
 It will seem at first that everything that you know will have to be unlearnt. Do not worry, you are a good learner, and not everything has to be un-learnt. Many of the thinking strategies will still be of use. And, the laws of physics will not change; only how you apply them. 
 
 I can not tell you what to do. I am but a fellow traveller. I can guide you, You can guide me, as we travel together.
+
+# :todo: telling stories
+Add section on how everything is affected my stories
+How we seen to tell stories of a new way
+How we had good stories in the past
+How there stories have been subverted, or replaced.
